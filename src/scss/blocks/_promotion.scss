@@ -1,0 +1,108 @@
+.promotion {
+    position: relative;
+    background-color: rgba(255, 171, 0, 0.4);
+
+    &::after {
+        content: '';
+        display: block;
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-image: url('./../img/promotion/bg.jpg');
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @include mediaBg() {
+            background-image: url('./../img/promotion/bg@2x.jpg');
+        }
+
+        @include mobile {
+            position: static;
+            height: 367px;
+            width: 100%;
+        }
+    }
+}
+.promotion__container {
+    padding-left: calc(
+		(100% - var(--container-width)) / 2 + (var(--container-width) / 2)
+	);
+
+    padding-right: calc((100% - var(--container-width)) / 2);
+
+    @include tablet {
+        padding-right: var(--container-padding);
+    }
+
+    @include mobile {
+        padding-left: var(--container-padding);
+        padding-right: var(--container-padding);
+    }
+}
+.promotion__content {
+    padding: 100px 0;
+    padding-left: 72px;
+
+    display: grid;
+    gap: 24px;
+
+    @include tablet {
+        padding: 50px 0;
+        padding-left: 32px;
+    }
+
+    @include mobile {
+        padding: 28px 0;
+    }
+}
+.promotion__desk {
+    display: grid;
+    gap: 16px;
+}
+.promotion__tagline {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: #377dff;
+}
+.promotion__title {
+    font-family: var(--font-accent);
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 110%;
+    letter-spacing: -0.01em;
+    color: #121212;
+
+    @include mobile {
+        font-size: 34px;
+        line-height: 112%;
+        letter-spacing: -0.02em;
+    }
+}
+.promotion__text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 160%;
+    color: #121212;
+
+    @include mobile {
+        font-size: 14px;
+        line-height: 157%;
+    }
+}
+.promotion__timer {
+    display: grid;
+    gap: 12px;
+
+    color: #141718;
+}
+.promotion__expires {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 162%;
+    color: #141718;
+}

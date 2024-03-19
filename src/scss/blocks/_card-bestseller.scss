@@ -1,0 +1,27 @@
+.card-bestseller {
+    position: relative;
+    display: grid;
+    gap: 12px;
+
+    &:hover {
+        .card__fav {
+            transform: translateY(0);
+            opacity: 1;
+            pointer-events: all;
+        }
+        
+        .card__btn {
+            transform: translateY(0);
+            opacity: 1;
+            pointer-events: all;
+        }
+    }
+
+    
+}
+
+.card-bestseller__desk {
+    display: grid;
+    gap: 4px;
+    min-height: 100px;  
+}
